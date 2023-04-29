@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function TextInput({onChange, placeholder="", containerStyle, inputStyle, value="", label="", ref, focus=false, required=true })
+export default function TextInput({
+    onChange, placeholder="", containerStyle, 
+    inputStyle="w-full rounded-lg border bg-[#F3F4F6] py-3 px-3 text-sm font-medium leading-4 tracking-ultra-tight text-neutral-500 focus:border-primary-green focus:outline-none", 
+    value="", label="", ref, focus=false, required=true 
+})
 {
     return (
         <div className={containerStyle}>

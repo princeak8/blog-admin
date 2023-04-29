@@ -6,7 +6,7 @@ import './App.css';
 import Login from "./pages/Login";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
-import AddProfile from "./pages/profile/Index";
+import AddProfile from "./pages/profile/Add";
 
 import { getUser } from "./localstorage/User";
 
