@@ -5,6 +5,7 @@ import './App.css';
 //Pages
 import Login from "./pages/Login";
 import Index from "./pages/Index";
+import Dashboard from "./pages/Dashboard";
 import AddProfile from "./pages/profile/Index";
 
 import { getUser } from "./localstorage/User";
@@ -27,8 +28,11 @@ function App() {
         {/* <Route path="/login" element={<Login />} /> */}
         {isLoggedIn && user ? (
                 <>
-                    <Route path="/" element={<Index />} />
-                    <Route path="*" element={<Index />} />
+                    <Route path="/" element={<Index />}>
+                        <Route index element={<Dashboard />} />
+                        <Route path="/dashboard" element={<Dashboard />} />
+                        <Route path="*" element={<Index />} />
+                    </Route>
                 </>
             ): isLoggedIn && !user ? (
                 <Route path="/" element={<Index />}>

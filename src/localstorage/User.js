@@ -37,10 +37,13 @@ export function getUser()
 {
     console.log("retrieve user");
     let user = (sessionStorage?.user) ? sessionStorage.user : null;
+    let email = (sessionStorage?.email) ? sessionStorage.email : null;
     let token = (sessionStorage?.token) ? sessionStorage.token : null;
     let token_expires = (sessionStorage?.token_expires) ? sessionStorage.token_expires : null;
+    let blog_name = (sessionStorage?.blog_name) ? sessionStorage.blog_name : null;
+    let domain = (sessionStorage?.domain) ? sessionStorage.domain : null;
     const isLoggedIn = (token) ? true : false;
-    return { user, token, token_expires, isLoggedIn};
+    return { user, email, token, token_expires, blog_name, domain, isLoggedIn};
 }
 
 // Clear session storage i.e logout

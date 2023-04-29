@@ -1,0 +1,46 @@
+/* The side navigation menu */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh;
+    /* transform: translateX(-5%); */
+    transition: 350ms linear;
+  }
+  
+  .mini-sidebar {
+    display: flex;
+    flex-direction: column;
+    /* transform: translateX(-25%); */
+    /* transition: 350ms linear; */
+  }
+  
+  .sidebar img {
+    margin-top: 20px;
+    height: 35px;
+    width: 160px;
+    align-self: center;
+    margin-bottom: 50px;
+    transition: 350ms;
+  }
+  
+  .mini-sidebar img {
+    /* width: 144.05px;
+    height: 27px; */
+    height: 35px;
+    width: 50px;
+    margin-top: 20px;
+    align-self: center;
+    margin-bottom: 50px;
+    transition: 350ms;
+  }
+  
+  @media only screen and (max-width: 720px) {
+    /* For mobile phones: */
+  
+    .sidebar,
+    .mini-sidebar {
+      display: none;
+    }
+  }
+  
