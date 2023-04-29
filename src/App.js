@@ -11,6 +11,8 @@ import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import AddProfile from "./pages/profile/Add";
 import AddPost from "./pages/Add_post";
+import EditPost from "./pages/Edit_post";
+import Post from "./pages/Post";
 const Posts = lazy(() => import("./pages/Posts"));
 
 
@@ -38,6 +40,8 @@ function App() {
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/posts" element={<Posts />} />
                         <Route path="/posts/add" element={<AddPost />} />
+                        <Route path="/edit_post/:postId" element={<EditPost />} />
+                        <Route path="/post/:postId" element={<Post />} />
                         <Route path="*" element={<Dashboard />} />
                     </Route>
                 </>
