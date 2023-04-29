@@ -1,14 +1,19 @@
+import { lazy } from "react";
 import { useEffect } from "react";
 import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 import './App.css';
+
+import { getUser } from "./localstorage/User";
 
 //Pages
 import Login from "./pages/Login";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import AddProfile from "./pages/profile/Add";
+import AddPost from "./pages/Add_post";
+const Posts = lazy(() => import("./pages/Posts"));
 
-import { getUser } from "./localstorage/User";
+
 
 function App() {
     const {user, isLoggedIn} = getUser();
@@ -31,7 +36,9 @@ function App() {
                     <Route path="/" element={<Index />}>
                         <Route index element={<Dashboard />} />
                         <Route path="/dashboard" element={<Dashboard />} />
-                        <Route path="*" element={<Index />} />
+                        <Route path="/posts" element={<Posts />} />
+                        <Route path="/posts/add" element={<AddPost />} />
+                        <Route path="*" element={<Dashboard />} />
                     </Route>
                 </>
             ): isLoggedIn && !user ? (

@@ -1,7 +1,6 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { EditorState, ContentState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
-import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
 
 function MyEditor ({
