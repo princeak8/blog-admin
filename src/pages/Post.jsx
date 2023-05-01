@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { Request } from "../api";
@@ -13,7 +14,7 @@ const Post = () => {
 
     useEffect(() => {
         if(!state.loaded) getPost();
-    });
+    },[]);
 
     const {token, domain} = getUser();
     const auth = { token, domain};

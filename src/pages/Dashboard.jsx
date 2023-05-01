@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 // import styles from "./css/Dashboard.module.css";
 // import { useDispatch, useSelector } from "react-redux";
@@ -20,7 +21,7 @@ const Dashboard = () => {
     //const posts = useSelector((state) => state.postsDisplay.allPosts);
     useEffect(() => {
         if(!state.loaded) getPosts();
-    });
+    },[]);
     //console.log('posts: ', posts);
     //console.log('unpublished', unpublished);
 

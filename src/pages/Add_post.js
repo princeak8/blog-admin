@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -130,7 +131,7 @@ function Add_post(props) {
 
     useEffect(() => {
         if(!tagsLoaded) getAllTags();
-    });
+    },[]);
 
     const handleSubmit = async (event) => {
         event.preventDefault();

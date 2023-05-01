@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { lazy } from "react";
 import { useEffect } from "react";
 import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
@@ -28,7 +29,7 @@ function App() {
             console.log("redirect to login");
             navigate("/login", { replace: true });
         }
-    })
+    },[])
 
   return (
     <Routes>
